@@ -4,19 +4,11 @@
 		<ul>
 			<li><%= link_to 'Home', :controller => 'home', :action => 'index' %></li>
 			<li class="current_page_item"><a href="#">Mail</a></li>
-			<li><a href="#">Sample2</a></li>
+			<!--<li><a href="#">Sample2</a></li>
 			<li><a href="#">Sample3</a></li>
-			<li><a href="#">Sample4</a></li>
+			<li><a href="#">Sample4</a></li>-->
 		</ul>
 	</div>
-	<!--<div id="search">
-		<form id="searchform" method="get" action="#">
-			<fieldset>
-			<input id="s" type="text" name="s" value="" class="text" />
-			<input id="x" type="submit" value="Search" class="button" />
-			</fieldset>
-		</form>
-	</div>-->
 </div>
 <div id="logo">
 	<h1>pc_kO2 Ruby Samples</h1>
@@ -27,4 +19,20 @@
 <hr />
 <!-- start page -->
 <div id="page">
+	<!--<%= form_tag("/sendMail", :method => "get") do %> -->
+	<%= form_tag( { :action => 'sendMail' }) %>
+		<table border="0">
+			<tr><td width="200"></td><td width="200">From: </td><td><%= text_field "form", "from" %></td></tr>
+  			<tr><td></td><td>To: </td><td><%= text_field "form", "to" %></td></tr>
+  			<tr><td></td><td>Subject: </td><td><%= text_field "form", "subject" %></td></tr>
+  			<tr><td></td><td>Content: </td><td><%= text_field "form", "content" %></td></tr>
+  			<tr><td></td><td>Server: </td><td><%= text_field "form", "server" %></td></tr>
+  			<tr><td></td><td>Host: </td><td><%= text_field "form", "host" %></td></tr>
+  			<tr><td></td><td>Port: </td><td><%= text_field "form", "port" %></td></tr>
+  			<tr><td></td><td>User: </td><td><%= text_field "form", "user" %></td></tr>
+  			<tr><td></td><td>Pass: </td><td><%= text_field "form", "pass" %></td></tr>
+  			<tr colspan="3"><td height="20"></td></tr>
+  			<tr><td></td><td></td><td><%= submit_tag("Send") %></td></tr>
+		</table> 
+<% end %> 
 </div>

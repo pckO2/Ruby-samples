@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  current_time: 2012-09-12
+  from: MyString
+  to: MyString
+  subjec: MyString
+  content: MyText
+
+two:
+  current_time: 2012-09-12
+  from: MyString
+  to: MyString
+  subjec: MyString
+  content: MyText
