@@ -23,16 +23,18 @@
 	<%= form_tag( { :action => 'sendMail' }) %>
 		<table border="0">
 			<tr><td width="200"></td><td width="200">From: </td><td><%= text_field "form", "from" %></td></tr>
-  			<tr><td></td><td>To: </td><td><%= text_field "form", "to" %></td></tr>
+  			<tr><td></td><td>To: </td><td><%= text_field "form", "toMail" %></td></tr>
   			<tr><td></td><td>Subject: </td><td><%= text_field "form", "subject" %></td></tr>
   			<tr><td></td><td>Content: </td><td><%= text_field "form", "content" %></td></tr>
   			<tr><td></td><td>Server: </td><td><%= text_field "form", "server" %></td></tr>
-  			<tr><td></td><td>Host: </td><td><%= text_field "form", "host" %></td></tr>
   			<tr><td></td><td>Port: </td><td><%= text_field "form", "port" %></td></tr>
   			<tr><td></td><td>User: </td><td><%= text_field "form", "user" %></td></tr>
-  			<tr><td></td><td>Pass: </td><td><%= text_field "form", "pass" %></td></tr>
+  			<tr><td></td><td>Pass: </td><td><%= password_field "form", "pass" %></td></tr>
   			<tr colspan="3"><td height="20"></td></tr>
   			<tr><td></td><td></td><td><%= submit_tag("Send") %></td></tr>
 		</table> 
 <% end %> 
+<% if flash[:error] -%>
+  <p class='error'><%=h flash[:error] %></p>
+<% end -%>
 </div>
