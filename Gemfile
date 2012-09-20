@@ -10,6 +10,7 @@ gem 'sqlite3'
 #gem 'mysql2', '~> 0.2.7' # Not mysql2 version 0.3.2 like you have
 
 gem 'tlsmail'
+gem 'twitter'
 
 # Use unicorn as the web server
 # gem 'unicorn'

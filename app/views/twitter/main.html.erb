@@ -1,0 +1,40 @@
+<!-- start header -->
+<div id="header">
+	<div id="menu">
+		<ul>
+			<li><%= link_to 'Home', :controller => 'home', :action => 'index' %></li>
+			<li><%= link_to 'Mail', :controller => 'mail', :action => 'mail' %></li>
+			<li class="current_page_item"><a href="#">Twitter</a></li>
+			<!-- <li><a href="#">Sample3</a></li>
+			<li><a href="#">Sample4</a></li>-->
+		</ul>
+	</div>
+</div>
+<div id="logo">
+	<h1>pc_kO2 Ruby Samples</h1>
+	<!-- <h2>basic utilities in Ruby</h2> -->
+	<p>basic utilities in Ruby</p>
+</div>
+<!-- end header -->
+<hr />
+<!-- start page -->
+<div id="page"> 
+<% if @myTweets -%>
+	<p>These are pc_kO2_tech's last 3 tweets:</p>
+	<% @myTweets.each do |myTweet| -%>
+		<blockquote><p><%= myTweet %></p></blockquote>
+	<% end %>
+<% end -%>
+
+
+
+<% if @userTweets.length > 1 -%>
+	<p>These are <%= @selectedUser -%>'s last 3 tweets:</p>
+	<% @userTweets.each do |userTweet| -%>
+		<blockquote><p><%= userTweet %></p></blockquote>
+	<% end %>
+<% end -%>
+
+
+
+</div>
